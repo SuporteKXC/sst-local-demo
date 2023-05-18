@@ -1,0 +1,23 @@
+service: serverless-test
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  region: us-east-1
+  timeout: 60
+  deploymentMethod: direct
+
+  environment:
+    BUCKET: xx
+    
+functions:
+  time:
+    handler: packages/functions/src/lambda.handler
+    events: 
+      - http: 
+          path: time
+          method: get
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline

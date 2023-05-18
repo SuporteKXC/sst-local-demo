@@ -1,0 +1,27 @@
+{
+  "name": "my-sst-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.4",
+    "aws-cdk-lib": "2.72.1",
+    "constructs": "10.1.156",
+    "serverless": "^3.24.1",
+    "serverless-offline": "^11.5.0",
+    "serverless-plugin-typescript": "^2.1.4",
+    "sst": "^2.8.26",
+    "typescript": "^5.0.4"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
