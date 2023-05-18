@@ -5,17 +5,31 @@ provider:
   runtime: nodejs16.x
   region: us-east-1
   timeout: 60
-  deploymentMethod: direct
 
-  environment:
-    BUCKET: xx
-    
 functions:
   time:
     handler: packages/functions/src/lambda.handler
     events: 
       - http: 
           path: time
+          method: get
+  time2:
+    handler: packages/functions/src/lambda.handler
+    events: 
+      - http: 
+          path: time2
+          method: get
+  time3:
+    handler: packages/functions/src/lambda.handler
+    events: 
+      - http: 
+          path: time3
+          method: get
+  time4:
+    handler: packages/functions/src/lambda.handler
+    events: 
+      - http: 
+          path: time4
           method: get
 
 plugins:
